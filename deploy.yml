@@ -1,0 +1,28 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ] # Ou "master", dependendo da sua branch principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # AQUI VOCÊ DEFINE O CAMINHO EXATO DA SUA SUbPASTA:
+          path: './dio-ai-projects/dashboard-com-agentes-ia'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

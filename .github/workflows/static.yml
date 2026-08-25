@@ -38,8 +38,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Publica os arquivos diretamente da raiz do repositório clonado
-          path: '.'
+          # Caminho relativo à raiz do repositório
+          path: './dashboard-com-agentes-ia'
 
       - name: Deploy to GitHub Pages
         id: deployment

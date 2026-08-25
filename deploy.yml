@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # AQUI VOCÊ DEFINE O CAMINHO EXATO DA SUA SUbPASTA:
-          path: './dio-ai-projects/dashboard-com-agentes-ia'
+          path: './dashboard-com-agentes-ia'
 
       - name: Deploy to GitHub Pages
         id: deployment
